@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LC Ticker</string>
+    <string name="coin_detail_fragment">Крипто: подробности</string>
+    <string name="info_list_fragment">Список криптовалют</string>
+    <string name="wallet_status">wallet status:</string>
+    <string name="loading">Loading ...</string>
+    <string name="withdraw_fee">WIthdraw fee:</string>
+    <string name="withdraw_min_amount">Min Withraw:</string>
+    <string name="deposit_min_amount">Min deposit:</string>
+    <string name="last_tick">Last value</string>
+    <string name="max_bid">Max. bid</string>
+    <string name="min_ask">Min. ask</string>
+    <string name="best_bid">Best bid</string>
+    <string name="an_error_occured">An Error occured...</string>
+</resources>

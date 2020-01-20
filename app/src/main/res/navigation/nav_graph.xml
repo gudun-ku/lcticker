@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/infoList">
+
+    <fragment
+        android:id="@+id/infoList"
+        android:name="com.beloushkin.lcticker.views.InfoList"
+        android:label="@string/info_list_fragment"
+        tools:layout="@layout/fragment_info_list">
+        <action
+            android:id="@+id/action_coinDetail"
+            app:destination="@+id/coinDetail">
+            <argument
+                android:name="symbol"
+                android:defaultValue="btc" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/coinDetail"
+        android:name="com.beloushkin.lcticker.views.CoinDetail"
+        android:label="@string/coin_detail_fragment"
+        tools:layout="@layout/fragment_coin_detail">
+        <action
+            android:id="@+id/action_infoList"
+            app:destination="@id/infoList" />
+        <argument
+            android:name="symbol"
+            app:argType="string" />
+    </fragment>
+</navigation>

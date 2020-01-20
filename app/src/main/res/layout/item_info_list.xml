@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imvCoinIcon"
+        android:layout_width="@dimen/icon_list_size"
+        android:layout_height="@dimen/icon_list_size"
+        android:layout_marginTop="@dimen/textview_margin"
+        android:layout_marginStart="@dimen/textview_margin_width"
+        android:layout_marginBottom="@dimen/textview_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCoinName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/textview_margin_width"
+        android:layout_marginTop="@dimen/textview_margin"
+        app:layout_constraintStart_toEndOf="@+id/imvCoinIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        tools:text="MaidSafeCoin"
+        />
+
+    <TextView
+        android:id="@+id/tvWalletStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/textview_margin_width"
+        android:layout_marginTop="@dimen/textview_margin"
+        app:layout_constraintStart_toEndOf="@+id/imvCoinIcon"
+        app:layout_constraintTop_toBottomOf="@id/tvCoinName"
+        android:text="@string/wallet_status"
+        />
+
+    <TextView
+        android:id="@+id/tvWalletStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/textview_margin"
+        app:layout_constraintStart_toEndOf="@id/tvWalletStatusText"
+        app:layout_constraintTop_toBottomOf="@id/tvCoinName"
+        tools:text="normal"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

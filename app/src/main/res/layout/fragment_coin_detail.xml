@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imvCoinIcon"
+            android:layout_width="@dimen/icon_detail_size"
+            android:layout_height="@dimen/icon_detail_size"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCoinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imvCoinIcon"
+            tools:text="MaidSafeCoin" />
+
+        <TextView
+            android:id="@+id/tvLastText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            android:text="@string/last_tick"
+            app:layout_constraintStart_toStartOf="@+id/imvCoinIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvCoinName" />
+
+        <TextView
+            android:id="@+id/tvLastValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            app:layout_constraintEnd_toEndOf="@+id/imvCoinIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvCoinName"
+            tools:text="999.9" />
+
+        <TextView
+            android:id="@+id/tvMaxBidText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            android:text="@string/max_bid"
+            app:layout_constraintStart_toStartOf="@+id/imvCoinIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvLastText" />
+
+        <TextView
+            android:id="@+id/tvMaxBid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            app:layout_constraintEnd_toEndOf="@+id/imvCoinIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvLastText"
+            tools:text="997.8" />
+
+        <TextView
+            android:id="@+id/tvMinAskText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            android:text="@string/min_ask"
+            app:layout_constraintStart_toStartOf="@+id/imvCoinIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvMaxBidText" />
+
+        <TextView
+            android:id="@+id/tvMinAsk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            app:layout_constraintEnd_toEndOf="@+id/imvCoinIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvMaxBidText"
+            tools:text="888.7" />
+
+        <TextView
+            android:id="@+id/tvBestBidText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            android:text="@string/best_bid"
+            app:layout_constraintStart_toStartOf="@+id/imvCoinIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvMinAskText" />
+
+        <TextView
+            android:id="@+id/tvBestBid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/textview_margin_width"
+            app:layout_constraintEnd_toEndOf="@+id/imvCoinIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvMinAskText"
+            tools:text="999.9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/llError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@string/an_error_occured"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            />
+    </LinearLayout>
+</FrameLayout>

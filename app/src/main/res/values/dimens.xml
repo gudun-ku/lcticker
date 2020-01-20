@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="icon_list_size">48dp</dimen>
+    <dimen name="textview_margin">8dp</dimen>
+    <dimen name="textview_margin_width">16dp</dimen>
+    <dimen name="icon_detail_size">160dp</dimen>
+</resources>
